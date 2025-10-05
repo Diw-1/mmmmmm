@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flor de lirios spider — Te amo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" role="main" aria-label="Flor animada que dice Te amo">
+    <div class="scene">
+      <div class="flower-wrap" id="flower-area" style="position:relative;">
+        <!-- Mensaje flotante -->
+        <div class="message" aria-hidden="false">
+          <div class="bubble" id="typedBubble" aria-live="polite" role="status"></div>
+          <div class="heart" title="Te amo">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 20s-7.5-4.4-9.2-7.2C1.2 8.6 6 5.5 9 7.6c1.5 1 2 2.5 3 3.1 1-.6 1.5-2.1 3-3.1 3-2.1 7.8 1 6.2 5.2C19.5 15.6 12 20 12 20z" fill="#fff" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- SVG de la flor -->
+        <svg viewBox="-160 -40 600 520" role="img" aria-label="Flor roja animada">
+          <g class="stem">
+            <path d="M140 200 C 120 220, 120 260, 140 300 C 150 325, 130 420, 150 470" stroke="#2b8a3e" stroke-width="10" stroke-linecap="round" fill="none"/>
+          </g>
+
+          <!-- Hojas -->
+          <g transform="translate(100,280) rotate(-8)">
+            <path d="M0 0 C -40 -20, -80 20, -12 60 C 20 80, 60 60, 40 30 C 20 0, -5 -10, 0 0" fill="#1f6e31" opacity="0.95"/>
+          </g>
+          <g transform="translate(160,330) rotate(12)">
+            <path d="M0 0 C 40 -20, 80 20, 12 60 C -20 80, -60 60, -40 30 C -20 0, 5 -10, 0 0" fill="#1f6e31" opacity="0.95"/>
+          </g>
+
+          <!-- Pétalos -->
+          <g id="petals" transform="translate(140,120)">
+            <path id="petal-shape" d="M0 0 C 40 -100, 140 -120, 160 -20 C 170 20, 120 60, 60 70 C 20 76, -6 40, 0 0 Z"
+                  fill="url(#petalGradient)" stroke="rgba(0,0,0,0.12)" stroke-width="1.2" />
+          </g>
+
+          <!-- Centro -->
+          <g transform="translate(140,120)" class="center" aria-hidden="true">
+            <circle cx="0" cy="0" r="16" fill="#fff3" />
+            <circle cx="0" cy="0" r="10" fill="#ffd9e0" />
+            <circle cx="0" cy="0" r="6" fill="#fff" />
+          </g>
+
+          <defs>
+            <linearGradient id="petalGradient" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff6a86"/>
+              <stop offset="45%" stop-color="#ff2b4a"/>
+              <stop offset="100%" stop-color="#b21734"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+             <aside class="panel" aria-label="Controles de animación">
+      <div class="title"><div class="dot" aria-hidden="true"></div><strong>Flor de lirios spider — roja</strong></div>
+      <div class="hint">Esto es con mucho cariño.</div>
+
+      <div class="buttons">
+        <button class="btn small" id="replayBtn">Reproducir mensaje</button>
+        <button class="btn small" id="colorBtn">Cambiar color</button>
+        <button class="btn small" id="stopBtn">Pausar movimiento</button>
+      </div>
+
+      <div class="credit">cada movimiento es mi corazon latiento jejo.</div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
